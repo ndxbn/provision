@@ -1,0 +1,11 @@
+# Ansible
+*.retry
+galaxy_roles/
+
+# VVagrant
+.vagrant/
+*.logs
+*.log
+
+# Node.js
+node_modules/
