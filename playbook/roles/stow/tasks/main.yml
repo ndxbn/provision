@@ -1,4 +1,4 @@
-- name: "Install GNU Stow"
+- name: "install GNU stow"
   become: yes
   package:
     name: stow

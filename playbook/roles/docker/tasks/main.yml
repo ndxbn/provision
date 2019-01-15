@@ -1,4 +1,4 @@
-- name: "Install Docker and Docker Compose"
+- name: "install Docker and Docker Compose"
   become: true
   import_role:
     name: geerlingguy.docker

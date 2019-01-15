@@ -1,4 +1,4 @@
-- name: "Install zsh"
+- name: "install zsh"
   become: yes
   package:
     name: zsh
