@@ -1,0 +1,25 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial64"
+
+  config.vm.provider "virtualbox" do |v|
+    v.cpus = 4
+    v.memory = 12 * 1024
+  end
+  config.vm.hostname = "devel.ndxbn.tokyo"
+  config.vm.network "public_network", ip: "192.168.1.5"
+  config.disksize.size = "500GB"
+
+  # Provisioning
+  config.vm.synced_folder "../../playbook", "/vagrant",
+                          id: "ansible",
+                          mount_options: ["dmode=775,fmode=664"]
+  ## bootstrapping
+  config.vm.provision :ansible_local,
+                      playbook: "vagrant.yml"
+  ## Configuration
+  config.vm.provision :ansible_local,
+                      playbook: "site.yml",
+                      galaxy_role_file: "requirements.yml",
+                      galaxy_roles_path: "galaxy_roles"
+
+end

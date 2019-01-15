@@ -1,0 +1,12 @@
+- name: "create user account"
+  loop: "{{ users }}"
+  user:
+    user: "{{ item }}"
+    state: present
+
+- name: "add user's authorized keys from github.com"
+  loop: "{{ users }}"
+  authorized_key:
+    user: "{{ item }}"
+    state: present
+    key: "https://github.com/{{ item }}.keys"

@@ -1,0 +1,31 @@
+- name: "create administrator account"
+  loop: "{{ administrators }}"
+  user:
+    user: "{{ item }}"
+    state: present
+
+- name: "administrators belong to adm and sudo groups on Ubuntu"
+  when: ansible_os_family == 'Debian'
+  loop: "{{ administrators }}"
+  user:
+    user: "{{ item }}"
+    state: present
+    groups:
+      - adm
+      - sudo
+
+- name: "administrators belong to wheel groups on CentOS"
+  when: ansible_os_family == 'RedHat'
+  loop: "{{ administrators }}"
+  user:
+    user: "{{ item }}"
+    state: present
+    groups:
+      - wheel
+
+- name: "add administrator's authorized keys from github.com"
+  loop: "{{ administrators }}"
+  authorized_key:
+    user: "{{ item }}"
+    state: present
+    key: "https://github.com/{{ item }}.keys"
