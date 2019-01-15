@@ -8,8 +8,8 @@
   roles:
     - role: devel-tools
     # shell and dotfiles
-    - role: stow
     - role: zsh
+    - role: stow
     # System Default Language Runtime
     - role: nodejs
     - role: php
@@ -19,8 +19,8 @@
   roles:
     - role: devel-tools
     # shell and dotfiles
-    - role: stow
     - role: zsh
+    - role: stow
     # System Default Language Runtime
     - role: nodejs
     - role: php
