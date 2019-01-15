@@ -23,6 +23,15 @@
     groups:
       - wheel
 
+- name: "allow sudo command without password for administrators"
+  loop: "{{ administrators }}"
+  template:
+    src: administrator.sudoers_config.j2
+    dest: "/etc/sudoers.d/{{ item }}"
+    owner: root
+    group: root
+    mode: 0400
+
 - name: "add administrator's authorized keys from github.com"
   loop: "{{ administrators }}"
   authorized_key:
