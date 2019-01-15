@@ -1,7 +1,7 @@
 - name: "create user account"
   loop: "{{ users }}"
   user:
-    user: "{{ item }}"
+    name: "{{ item }}"
     state: present
 
 - name: "add user's authorized keys from github.com"
