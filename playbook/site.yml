@@ -13,6 +13,8 @@
     # System Default Language Runtime
     - role: nodejs
     - role: php
+    # user local scripts
+    - role: anyenv
 
 - name: "Development Server"
   hosts: development
@@ -26,6 +28,8 @@
     - role: php
     # docker build, debug docker-compose and more
     - role: docker
+    # user local scripts
+    - role: anyenv
 
 - name: "Application Server"
   hosts: application
