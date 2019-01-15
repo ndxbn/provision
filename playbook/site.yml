@@ -1,8 +1,36 @@
-- name: ""
+- name: "Common Roles"
   hosts: all
   roles:
     - role: account
+
+- name: "Windows Subsystem for Linux"
+  hosts: wsl
+  roles:
     - role: devel-tools
+    # shell and dotfiles
+    - role: stow
+    - role: zsh
+    # System Default Language Runtime
+    - role: nodejs
+    - role: php
+
+- name: "Development Server"
+  hosts: development
+  roles:
+    - role: devel-tools
+    # shell and dotfiles
+    - role: stow
+    - role: zsh
+    # System Default Language Runtime
+    - role: nodejs
+    - role: php
+    # docker build, debug docker-compose and more
+    - role: docker
+
+- name: "Application Server"
+  hosts: application
+  roles:
+    - role: docker
 
 #
 #- name: ""
