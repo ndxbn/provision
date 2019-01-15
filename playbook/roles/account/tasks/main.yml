@@ -2,3 +2,6 @@
   become: true
 - import_tasks: users.yml
   become: true
+
+- import_tasks: deletion.yml
+  become: true

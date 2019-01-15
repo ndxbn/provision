@@ -1,0 +1,5 @@
+- name: "delete some users"
+  loop: "{{ users_deleted }}"
+  user:
+    state: absent
+    name: "{{ item }}"
