@@ -1,10 +1,7 @@
 - name: ""
   hosts: all
   roles:
-    - role: geerlingguy.docker
-      become: true
-      vars:
-        docker_compose_version: "1.23.2"
+    - role: account
 
 #
 #- name: ""
