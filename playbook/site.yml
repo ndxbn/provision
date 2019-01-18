@@ -38,6 +38,12 @@
       tags:
         - certbot
         - ssl
+- name: "Load Balancer"
+  hosts: load_balancer
+  roles:
+    - role: nginx
+      tags:
+        - nginx
 
 - name: "Application Server"
   hosts: application
