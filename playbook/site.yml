@@ -43,3 +43,5 @@
   hosts: application
   roles:
     - role: docker
+    - role: jetbrains
+      tags: jetbrains
