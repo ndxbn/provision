@@ -3,5 +3,5 @@
 #  - role: common
 #    vars:
 #      some_parameter: 3
-#dependencies:
-#  - role: nginx
+dependencies:
+  - role: nginx
