@@ -5,7 +5,6 @@
   vars:
     certbot_create_if_missing: true
     certbot_admin_email: sitri.ndxbn@gmail.com
-    certbot_create_standalone_stop_services: []
     certbot_certs:
       # APEX Domain
       - domains:

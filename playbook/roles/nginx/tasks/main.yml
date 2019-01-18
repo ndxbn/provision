@@ -4,3 +4,11 @@
     name: geerlingguy.nginx
   vars:
     nginx_remove_default_vhost: true
+
+- name: "put redirect from http to over SSL config"
+  become: true
+  copy:
+    src: redirect_to_over_ssl.conf
+    dest: /etc/nginx/conf.d/redirect_to_over_ssl.conf
+  notify:
+    - "reload nginx"
