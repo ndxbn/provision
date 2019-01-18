@@ -1,0 +1,24 @@
+- name: "certbot"
+  become: true
+  import_role:
+    name: geerlingguy.certbot
+  vars:
+    certbot_create_if_missing: true
+    certbot_admin_email: sitri.ndxbn@gmail.com
+    certbot_create_standalone_stop_services: []
+    certbot_certs:
+      # APEX Domain
+      - domains:
+        - ndxbn.tokyo
+      # API Server
+      - domains:
+        - api.ndxbn.tokyo
+      # JetBrains
+      - domains:
+        - hub.ndxbn.tokyo
+      - domains:
+        - youtrack.ndxbn.tokyo
+      - domains:
+        - upsource.ndxbn.tokyo
+      - domains:
+        - teamcity.ndxbn.tokyo

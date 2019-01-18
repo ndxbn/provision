@@ -31,6 +31,14 @@
     # user local scripts
     - role: anyenv
 
+- name: "SSL Certification Server"
+  hosts: ssl_certification
+  roles:
+    - role: certbot
+      tags:
+        - certbot
+        - ssl
+
 - name: "Application Server"
   hosts: application
   roles:
