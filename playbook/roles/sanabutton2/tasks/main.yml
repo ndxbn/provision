@@ -1,0 +1,7 @@
+- name: "put redirect from apex domain to www. sub-domain"
+  become: true
+  copy:
+    src: nginx.conf
+    dest: /etc/nginx/conf.d/natorisana.love.conf
+  notify:
+    - "reload nginx"

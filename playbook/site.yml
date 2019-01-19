@@ -56,3 +56,9 @@
     - role: jetbrains
       tags:
         - jetbrains
+
+- name: "sanabutton(2) Server"
+  hosts: sanabutton2
+  roles:
+    - role: sanabutton2
+      tags: sanabutton2
