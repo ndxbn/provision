@@ -12,15 +12,6 @@
       # API Server
       - domains:
         - api.ndxbn.tokyo
-      # JetBrains
-      - domains:
-        - hub.ndxbn.tokyo
-      - domains:
-        - youtrack.ndxbn.tokyo
-      - domains:
-        - upsource.ndxbn.tokyo
-      - domains:
-        - teamcity.ndxbn.tokyo
       # natorisana.love
       - domains:
           - natorisana.love

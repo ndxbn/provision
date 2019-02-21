@@ -50,13 +50,6 @@
   roles:
     - role: docker
 
-- name: "JetBrains Server"
-  hosts: jetbrains
-  roles:
-    - role: jetbrains
-      tags:
-        - jetbrains
-
 - name: "sanabutton(2) Server"
   hosts: sanabutton2
   roles:
