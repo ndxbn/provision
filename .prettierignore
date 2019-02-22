@@ -1,0 +1,13 @@
+Vagrantfile
+LICENSE
+
+*.j2
+*.conf
+*.cfg
+*.log
+*.txt
+
+# dotfiles
+.*
+
+galaxy_roles/
