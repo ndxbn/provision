@@ -8,10 +8,10 @@
     certbot_certs:
       # APEX Domain
       - domains:
-        - ndxbn.tokyo
+          - ndxbn.tokyo
       # API Server
       - domains:
-        - api.ndxbn.tokyo
+          - api.ndxbn.tokyo
       # natorisana.love
       - domains:
           - natorisana.love
