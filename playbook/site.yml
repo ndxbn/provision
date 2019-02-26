@@ -3,34 +3,6 @@
   roles:
     - role: account
 
-- name: "Windows Subsystem for Linux"
-  hosts: wsl
-  roles:
-    - role: devel-tools
-    # shell and dotfiles
-    - role: zsh
-    - role: stow
-    # System Default Language Runtime
-    - role: nodejs
-    - role: php
-    # user local scripts
-    - role: anyenv
-
-- name: "Development Server"
-  hosts: development
-  roles:
-    - role: devel-tools
-    # shell and dotfiles
-    - role: zsh
-    - role: stow
-    # System Default Language Runtime
-    - role: nodejs
-    - role: php
-    # docker build, debug docker-compose and more
-    - role: docker
-    # user local scripts
-    - role: anyenv
-
 - name: "SSL Certification Server"
   hosts: ssl_certification
   roles:

@@ -1,0 +1,12 @@
+- name: "Windows Subsystem for Linux"
+  hosts: all
+  roles:
+    - role: devel-tools
+    # shell and dotfiles
+    - role: zsh
+    - role: stow
+    # System Default Language Runtime
+    - role: nodejs
+    - role: php
+    # user local scripts
+    - role: anyenv
