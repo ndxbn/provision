@@ -1,9 +1,7 @@
 - name: "install nginx"
   become: true
   import_role:
-    name: geerlingguy.nginx
-  vars:
-    nginx_remove_default_vhost: true
+    name: nginxinc.nginx
 
 - name: "put redirect from http to over SSL config"
   become: true

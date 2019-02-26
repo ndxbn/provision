@@ -2,7 +2,6 @@
 - src: geerlingguy.composer
 - src: geerlingguy.docker
 - src: geerlingguy.git
-- src: geerlingguy.nginx
 - src: geerlingguy.nodejs
 - src: geerlingguy.mysql
 - src: geerlingguy.php
@@ -10,3 +9,4 @@
 - src: geerlingguy.redis
 - src: geerlingguy.repo-epel
 - src: geerlingguy.repo-remi
+- src: nginxinc.nginx
