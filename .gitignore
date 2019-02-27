@@ -9,6 +9,3 @@ galaxy_roles/
 
 # Node.js
 node_modules/
-
-# sub repository
-/docs/

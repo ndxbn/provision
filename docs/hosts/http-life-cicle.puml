@@ -1,0 +1,90 @@
+@startuml
+
+actor browser [
+  ウェブブラウザ
+]
+
+package facade {
+  node load_balancer [
+    Load Balancer
+     - SSL 証明書の更新・管理
+     -- /etc/letsencrypt/live/xxx/fullcain.pem
+     -- /etc/letsencrypt/live/xxx/privkey.pem
+     - SSL を解く
+     - L7 ロードバランシング
+     - DoS 攻撃対策
+  ]
+}
+
+browser --> load_balancer: HTTPS
+
+package web_server {
+  node web [
+    Web Server
+    - 静的コンテンツのキャッシュ
+    - リバースプロキシ
+  ]
+  node application [
+    Application Server
+    - 動的コンテンツの生成
+  ]
+}
+load_balancer --> web: HTTP
+web --> application: HTTP or CGI
+
+package store {
+  database database [
+    Relational Database
+    - リレーショナルデータベース
+  ]
+  database document [
+    Document Database
+    - ドキュメントデータベース
+    - 分散データベース
+  ]
+  database graph [
+    Graph Database
+    - グラフデータベース
+  ]
+  database cache [
+    Cache
+    - TTL付き オンメモリ Key Value Store
+  ]
+  queue message_queue [
+    Message Queue
+    - メッセージキュー
+  ]
+  storage storage [
+    Storage
+    - Object ファイルストレージ
+  ]
+}
+application --> database
+application --> document
+application --> graph
+application --> cache
+application --> message_queue: AMQP or MQTT
+application --> storage: file or s3
+
+package operation {
+  node batch [
+    バッチサーバ
+    - 時間駆動
+    - イベント・ドリブンな処理
+  ]
+  node monitor [
+    監視サーバ
+    - 時系列 DB
+    - ダッシュボード
+  ]
+  node provision [
+
+  ]
+}
+database <--> batch
+document <--> batch
+graph <--> batch
+message_queue <--> batch
+storage <--> batch
+
+@enduml
