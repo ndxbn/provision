@@ -12,14 +12,3 @@
     - role: nginx
       tags:
         - nginx
-
-- name: "Application Server"
-  hosts: application
-  roles:
-    - role: docker
-
-- name: "sanabutton(2) Server"
-  hosts: sanabutton2
-  roles:
-    - role: sanabutton2
-      tags: sanabutton2
