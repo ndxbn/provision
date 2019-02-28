@@ -3,16 +3,12 @@
   roles:
     - role: account
 
-- name: "SSL Certification Server"
-  hosts: ssl_certification
+- name: "Load Balancer"
+  hosts: load_balancer
   roles:
     - role: certbot
       tags:
         - certbot
-        - ssl
-- name: "Load Balancer"
-  hosts: load_balancer
-  roles:
     - role: nginx
       tags:
         - nginx
