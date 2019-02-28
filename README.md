@@ -2,6 +2,19 @@
 
 ndxbn.tokyo Infrastructure
 
+## Requirement and Bootstrapping
+
+### Vagrant
+
+スタンドアロン環境や開発環境を作るときに必要なもの
+
+- Oracle Virtual Box
+- Vagrant
+
+```bash
+vagrant plugin install vagrant-disksize vagrant-vbguest
+``` 
+
 ## Usage
 
 ### WSL のセットアップ
