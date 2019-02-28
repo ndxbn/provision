@@ -77,8 +77,10 @@ package operation {
     - 時系列 DB
     - ダッシュボード
   ]
-  node provision [
-
+  node deploy [
+    deploy
+    デプロイとかをするサーバ
+    いわゆる Controller Node
   ]
 }
 database <--> batch
