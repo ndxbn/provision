@@ -13,13 +13,10 @@ do on `ndxbn` user:
 ```bash
 # ensure dot-ssh directory
 mkdir -p ${HOME}/.ssh
-chmod 700 ${HOME}/.ssh
 
-# get public keys from github.com
-curl -q https://github.com/ndxbn.keys >> ${HOME}/.ssh/authorized_keys
 ## remove duplicated keys
 mv ${HOME}/.ssh/authorized_keys ${HOME}/.ssh/authorized_keys.backup
-cat ${HOME}/.ssh/authorized_keys.backup | sort | uniq > ${HOME}/.ssh/authorized_keys
+curl -q https://github.com/ndxbn.keys | sort | uniq > ${HOME}/.ssh/authorized_keys
 ## fix file permission
 chmod 600 ${HOME}/.ssh/authorized_keys
 ```
