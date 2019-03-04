@@ -4,6 +4,7 @@
   package:
     name:
       - build-essential
+      # Ubuntu has `/etc/mime.types` by default.
 
 - name: "install development tools"
   become: true
@@ -11,3 +12,5 @@
   package:
     name:
       - "@Development Tools"
+      # /etc/mime.types
+      - mailcap
