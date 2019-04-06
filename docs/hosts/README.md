@@ -5,15 +5,21 @@
     min-width: 615px;
     min-height: 300px;"></iframe>
 
-### deploy
-
 ### server01
 
-`/var/lib` にマウントされているのは、データベースや Docker Server などが使う。
+- Web Server
+- Application Server
+- DataStore
+- バッチサーバ
 
-`/home` にマウントされているのは、アプリケーションごとのストレージ領域として使う。
+いわゆる Web アプリケーションのサーバサイドのほぼ全部。
+
+Cache サーバ
 
 ### server02
+
+- Private File Server (transfer over SSH)
+- Cache Server
 
 大きな容量のハードディスクが `/home` にマウントされているが、これは専ら LAN 内でのファイルサーバ用途。
 samba などは使用しておらず、 over SSH なプロトコル（SFTP や RSYNC）で通信する。
@@ -22,4 +28,11 @@ samba などは使用しておらず、 over SSH なプロトコル（SFTP や R
 
 ### server03
 
-各サーバの監視をしている。
+- ロードバランサー
+
+`/var/lib` は Docker イメージの保存に使用
+
+
+### server04
+
+- サーバ監視
