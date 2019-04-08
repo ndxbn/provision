@@ -28,7 +28,7 @@ sudo apt-get install software-properties-common
 sudo apt-add-repository --yes --update ppa:ansible/ansible
 sudo apt-get install ansible
 
-git clone git@github.com:ndxbn-tokyo/provision.git
+git clone git@github.com:ndxbn/provision.git
 pushd ./provision/playbook
 ansible-playbook -i wsl wsl.yml
 popd
@@ -38,7 +38,7 @@ popd
 
 ネットワーク構成が本番環境と同じ環境を、ローカルの Virtual Box に作る。
 
-開発マシンがホストOSの場合、以下の設定を `hosts` に追加する。
+開発マシンがホストOSの場合、以下の設定を `hosts` に追加するとよい。
 
 ```text
 192.168.57.6  server01 server01.devel.ndxbn.tokyo
