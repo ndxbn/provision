@@ -10,3 +10,4 @@
     - role: php
     # user local scripts
     - role: anyenv
+    - role: zplug
