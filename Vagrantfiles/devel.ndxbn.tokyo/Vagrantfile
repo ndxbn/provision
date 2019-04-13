@@ -21,8 +21,8 @@ Vagrant.configure("2") do |config|
     machine.vm.network :private_network, ip: "192.168.57.9"
   end
 
-  config.vm.define "deploy", primary: true do |machine|
-    machine.vm.hostname = "deploy.devel.ndxbn.tokyo"
+  config.vm.define "server04", primary: true do |machine|
+    machine.vm.hostname = "server04.devel.ndxbn.tokyo"
     machine.vm.network :private_network, ip: "192.168.57.7"
 
     config.vm.synced_folder "../../playbook", "/vagrant",
