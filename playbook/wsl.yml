@@ -1,4 +1,4 @@
-- name: "Windows Subsystem for Linux"
+- name: "Configuration Layer Tasks for Windows Subsystem for Linux"
   hosts: all
   roles:
     - role: devel-tools
