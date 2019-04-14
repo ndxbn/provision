@@ -42,10 +42,11 @@ popd
 開発マシンがホストOSの場合、以下の設定を `hosts` に追加するとよい。
 
 ```text
-192.168.57.6  server01 server01.devel.ndxbn.tokyo
-192.168.57.7  deploy deploy.devel.ndxbn.tokyo
-192.168.57.8  server02 server02.devel.ndxbn.tokyo
-192.168.57.9  server03 server03.devel.ndxbn.tokyo
+# development
+192.168.57.7     devel01 devel01.ndxbn.tokyo 
+192.168.57.8     devel02 devel02.ndxbn.tokyo
+192.168.57.9     devel03 devel03.ndxbn.tokyo
+192.168.57.10    devel04 devel04.ndxbn.tokyo
 ```
 
 ### Production
