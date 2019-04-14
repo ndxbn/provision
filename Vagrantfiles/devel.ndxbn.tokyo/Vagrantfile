@@ -26,12 +26,12 @@ Vagrant.configure("2") do |config|
     machine.vm.hostname = "devel04.ndxbn.tokyo"
     machine.vm.network :private_network, ip: "192.168.57.10"
 
-    # playbook/vagrant.yml で作っている administrators の秘密鍵や ssh-config ファイルを置く
+    # playbook/vagrant.yml で作っている administrators の秘密鍵や ssh-config を置く
     machine.vm.provision :file, source: "~/.ssh", destination: ".ssh"
     machine.vm.provision :shell, privileged: false,
                          inline: "chmod 600 ~/.ssh/*"
 
-    config.vm.provision "ansible_local" do |ansible|
+    machine.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "site.yml"
       ansible.inventory_path = "development"
       ansible.limit = "all"
