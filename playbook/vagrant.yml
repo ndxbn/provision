@@ -1,0 +1,7 @@
+- name: "Bootstrapping Layer Tasks for Vagrant"
+  hosts: all
+  vars:
+    administrators:
+      - ndxbn
+  roles:
+    - role: account
