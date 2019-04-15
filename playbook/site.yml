@@ -2,6 +2,11 @@
   hosts: all
   roles:
     - role: account
+      tags:
+        - account
+    - role: docker
+      tags:
+        - docker
 
 - name: "Load Balancer"
   hosts: load_balancer
