@@ -29,6 +29,4 @@ samba などは使用しておらず、 over SSH なプロトコル（SFTP や R
 ### server03
 
 - サーバ監視
-`/var/lib` は Docker イメージの保存に使用
-
-
+- `/var/lib` は Docker イメージの保存に使用
