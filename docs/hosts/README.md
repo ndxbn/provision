@@ -5,6 +5,8 @@
     min-width: 615px;
     min-height: 300px;"></iframe>
 
+[↑で表示してるやつ](https://docs.google.com/spreadsheets/d/10VSlOHDc8Bz3YrpPDXfOrrZqGIJgkCT3TgroJ200WUY/edit?usp=sharing)
+
 ### server01
 
 - Web Server
@@ -13,8 +15,6 @@
 - バッチサーバ
 
 いわゆる Web アプリケーションのサーバサイドのほぼ全部。
-
-Cache サーバ
 
 ### server02
 
@@ -28,11 +28,7 @@ samba などは使用しておらず、 over SSH なプロトコル（SFTP や R
 
 ### server03
 
-- ロードバランサー
-
+- サーバ監視
 `/var/lib` は Docker イメージの保存に使用
 
 
-### server04
-
-- サーバ監視
