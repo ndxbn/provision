@@ -5,6 +5,8 @@
     min-width: 615px;
     min-height: 300px;"></iframe>
 
+[↑で表示してるやつ](https://docs.google.com/spreadsheets/d/10VSlOHDc8Bz3YrpPDXfOrrZqGIJgkCT3TgroJ200WUY/edit?usp=sharing)
+
 ### server01
 
 - Web Server
@@ -14,12 +16,11 @@
 
 いわゆる Web アプリケーションのサーバサイドのほぼ全部。
 
-Cache サーバ
-
 ### server02
 
 - Private File Server (transfer over SSH)
-- Cache Server
+- Cache Server (Redis Server)
+- Message Queue Server (Rabbit MQ)
 
 大きな容量のハードディスクが `/home` にマウントされているが、これは専ら LAN 内でのファイルサーバ用途。
 samba などは使用しておらず、 over SSH なプロトコル（SFTP や RSYNC）で通信する。
@@ -28,11 +29,6 @@ samba などは使用しておらず、 over SSH なプロトコル（SFTP や R
 
 ### server03
 
-- ロードバランサー
-
-`/var/lib` は Docker イメージの保存に使用
-
-
-### server04
-
 - サーバ監視
+- [Ansible AWX](https://github.com/ansible/awx)サーバ
+- `/var/lib` は Docker イメージの保存に使用
