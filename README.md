@@ -46,7 +46,6 @@ popd
 192.168.57.7     devel01 devel01.ndxbn.tokyo 
 192.168.57.8     devel02 devel02.ndxbn.tokyo
 192.168.57.9     devel03 devel03.ndxbn.tokyo
-192.168.57.10    devel04 devel04.ndxbn.tokyo
 ```
 
 ### Production
