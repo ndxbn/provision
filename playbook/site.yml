@@ -7,6 +7,9 @@
     - role: docker
       tags:
         - docker
+    - role: git
+      tags:
+        - git
 
 - name: "Load Balancer"
   hosts: load_balancer
