@@ -3,6 +3,7 @@
   import_role:
     name: geerlingguy.certbot
   vars:
+    certbot_install_from_source: true
     certbot_create_if_missing: true
     certbot_admin_email: sitri.ndxbn@gmail.com
     certbot_certs:
