@@ -1,0 +1,7 @@
+- name: "install Git"
+  become: true
+  import_role:
+    name: geerlingguy.git
+  vars:
+    git_install_from_source: true
+    git_version: "2.21.0"

@@ -1,5 +1,6 @@
 - src: geerlingguy.certbot
 - src: geerlingguy.docker
+- src: geerlingguy.git
 - src: geerlingguy.mysql
 - src: geerlingguy.redis
 - src: nginxinc.nginx
