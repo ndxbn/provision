@@ -1,4 +1,0 @@
-- name: "import geerlingguy.nodejs"
-  become: true
-  import_role:
-    name: geerlingguy.nodejs

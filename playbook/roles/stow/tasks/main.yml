@@ -1,5 +1,0 @@
-- name: "install GNU stow"
-  become: yes
-  package:
-    name: stow
-    state: latest

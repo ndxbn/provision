@@ -1,5 +1,0 @@
-administrators: []
-
-users: []
-
-zplug__users: "{{ administrators + users }}"

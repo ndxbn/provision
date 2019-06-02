@@ -1,7 +1,0 @@
-- name: "install zplub"
-  loop: "{{ zplug__users }}"
-  become: true
-  become_user: "{{ item }}"
-  git:
-    repo: https://github.com/zplug/zplug.git
-    dest: "/home/{{ item }}/.zplug"
