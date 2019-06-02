@@ -1,0 +1,11 @@
+- name: "remove old version Git"
+  become: true
+  yum:
+    name: git
+    state: absent
+
+- name: "install Git"
+  become: true
+  yum:
+    name: git2u
+    state: present

@@ -1,7 +1,5 @@
-- name: "install Git"
+- import_tasks: centos7.yml
   become: true
-  import_role:
-    name: geerlingguy.git
-  vars:
-    git_install_from_source: true
-    git_version: "2.21.0"
+  when:
+    - ansible_distribution == 'CentOS'
+    - ansible_distribution_major_version = '7'
