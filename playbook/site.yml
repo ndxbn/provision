@@ -14,9 +14,9 @@
 - name: "Load Balancer"
   hosts: load_balancer
   roles:
-    - role: certbot
-      tags:
-        - certbot
     - role: nginx
       tags:
         - nginx
+    - role: certbot
+      tags:
+        - certbot
