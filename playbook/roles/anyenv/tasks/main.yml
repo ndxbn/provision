@@ -1,7 +1,0 @@
-- name: "Install anyenv"
-  loop: "{{ anyenv__users }}"
-  become: true
-  become_user: "{{ item }}"
-  git:
-    repo: https://github.com/ndxbn/anyenv.git
-    dest: "/home/{{ item }}/.anyenv"

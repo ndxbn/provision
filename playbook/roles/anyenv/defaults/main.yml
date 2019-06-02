@@ -1,4 +1,0 @@
-administrators: []
-users: []
-
-anyenv__users: "{{ administrators + users }}"

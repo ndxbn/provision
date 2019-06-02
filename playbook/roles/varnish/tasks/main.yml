@@ -1,9 +1,0 @@
-- name: "install varnish"
-  become: true
-  import_role:
-    name: geerlingguy.varnish
-  vars:
-    # use LTS version
-    varnish_version: 6.0
-
-    # https://github.com/geerlingguy/ansible-role-varnish/blob/master/defaults/main.yml
