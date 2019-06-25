@@ -4,7 +4,7 @@
     name: git
     state: absent
 
-- name: "install Git"
+- name: "install Git from IUS"
   become: true
   yum:
     name: git2u
