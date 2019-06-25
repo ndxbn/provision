@@ -2,6 +2,8 @@
 
 ndxbn.tokyo Infrastructure
 
+I manage ISSUE in https://github.com/ndxbn/ndxbn/labels/package%3Aprovision
+
 ## Requirement and Bootstrapping
 
 ### Vagrant
