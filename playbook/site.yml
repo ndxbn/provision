@@ -1,9 +1,16 @@
-- name: "Common Roles"
+- name: "Bootstrapping"
   hosts: all
   roles:
     - role: account
       tags:
         - account
+    - role: network
+      tags:
+        - network
+
+- name: "Common Roles"
+  hosts: all
+  roles:
     - role: docker
       tags:
         - docker
