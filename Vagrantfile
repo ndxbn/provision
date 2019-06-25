@@ -1,7 +1,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "centos/7"
 
-  config.vm.synced_folder "../../playbook", "/vagrant",
+  config.vm.synced_folder "./playbook", "/vagrant",
                           type: "nfs",
                           id: "ansible",
                           mount_options: ["dmode=775,fmode=664"]
