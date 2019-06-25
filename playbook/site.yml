@@ -10,13 +10,3 @@
     - role: git
       tags:
         - git
-
-- name: "Load Balancer"
-  hosts: load_balancer
-  roles:
-    - role: nginx
-      tags:
-        - nginx
-    - role: certbot
-      tags:
-        - certbot
