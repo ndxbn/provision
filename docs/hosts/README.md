@@ -7,28 +7,27 @@
 
 [↑で表示してるやつ](https://docs.google.com/spreadsheets/d/10VSlOHDc8Bz3YrpPDXfOrrZqGIJgkCT3TgroJ200WUY/edit?usp=sharing)
 
-### server01
+### server11
 
 - Web Server
 - Application Server
+- DBMS
 - DataStore
 - バッチサーバ
 
 いわゆる Web アプリケーションのサーバサイドのほぼ全部。
 
+### server12
+
+- Redis
+- RabbitMQ
+
+メモリを使うミドルウェア。
+ストレージ容量がとても少ないので、Docker Image だけでいっぱいになりそう。
+
 ### server02
 
 - Private File Server (transfer over SSH)
-- Cache Server (Redis Server)
-- Message Queue Server (Rabbit MQ)
 
 大きな容量のハードディスクが `/home` にマウントされているが、これは専ら LAN 内でのファイルサーバ用途。
 samba などは使用しておらず、 over SSH なプロトコル（SFTP や RSYNC）で通信する。
-
-ファイルサーバ用途だけだと、CPU と メモリ が余るため、Cache サーバ と Message Queue サーバとしても使う。
-
-### server03
-
-- サーバ監視
-- [Ansible AWX](https://github.com/ansible/awx)サーバ
-- `/var/lib` は Docker イメージの保存に使用
