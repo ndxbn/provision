@@ -7,22 +7,29 @@
 
 [↑で表示してるやつ](https://docs.google.com/spreadsheets/d/10VSlOHDc8Bz3YrpPDXfOrrZqGIJgkCT3TgroJ200WUY/edit?usp=sharing)
 
-### server11
+### server03
 
 - Web Server
 - Application Server
+
+Application サーバ。
+ログはできるだけ server11 へ転送する。
+
+### server11
+
 - DBMS
 - DataStore
 - バッチサーバ
 
-いわゆる Web アプリケーションのサーバサイドのほぼ全部。
+データストア系のミドルウェアと、バッチサーバ。
+バッチサーバをこちらにおいているのは、大量のデータの処理をするのに LAN の帯域を使いたくないから。
 
 ### server12
 
 - Redis
 - RabbitMQ
 
-メモリを使うミドルウェア。
+メモリ系のミドルウェアのサーバ。
 ストレージ容量がとても少ないので、Docker Image だけでいっぱいになりそう。
 
 ### server02
