@@ -9,11 +9,11 @@
 
 ### server03
 
-- Web Server
-- Application Server
+- Redis
+- RabbitMQ
 
-Application サーバ。
-ログはできるだけ server11 へ転送する。
+メモリ系のミドルウェアのサーバ。
+ストレージ容量がとても少ないので、Docker Image だけでいっぱいになりそう。
 
 ### server11
 
@@ -26,11 +26,11 @@ Application サーバ。
 
 ### server12
 
-- Redis
-- RabbitMQ
+- Web Server
+- Application Server
 
-メモリ系のミドルウェアのサーバ。
-ストレージ容量がとても少ないので、Docker Image だけでいっぱいになりそう。
+Application サーバ。
+ログはできるだけ server11 へ転送する。
 
 ### server02
 
