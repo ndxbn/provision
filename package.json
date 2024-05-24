@@ -8,7 +8,7 @@
     "lint:yaml": "prettier -l \"**/*\""
   },
   "devDependencies": {
-    "npm-run-all2": "5.0.0",
+    "npm-run-all2": "5.0.2",
     "prettier": "3.2.5"
   }
 }
