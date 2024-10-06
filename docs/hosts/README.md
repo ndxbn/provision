@@ -7,34 +7,3 @@
 
 [↑で表示してるやつ](https://docs.google.com/spreadsheets/d/10VSlOHDc8Bz3YrpPDXfOrrZqGIJgkCT3TgroJ200WUY/edit?usp=sharing)
 
-### server03
-
-- Redis
-- RabbitMQ
-
-メモリ系のミドルウェアのサーバ。
-ストレージ容量がとても少ないので、Docker Image だけでいっぱいになりそう。
-
-### server11
-
-- DBMS
-- DataStore
-- バッチサーバ
-
-データストア系のミドルウェアと、バッチサーバ。
-バッチサーバをこちらにおいているのは、大量のデータの処理をするのに LAN の帯域を使いたくないから。
-
-### server12
-
-- Web Server
-- Application Server
-
-Application サーバ。
-ログはできるだけ server11 へ転送する。
-
-### server02
-
-- Private File Server (transfer over SSH)
-
-大きな容量のハードディスクが `/home` にマウントされているが、これは専ら LAN 内でのファイルサーバ用途。
-samba などは使用しておらず、 over SSH なプロトコル（SFTP や RSYNC）で通信する。

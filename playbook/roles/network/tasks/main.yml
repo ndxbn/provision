@@ -1,4 +1,0 @@
-- import_tasks: hosts.yml
-  become: true
-  tags:
-    - hosts
