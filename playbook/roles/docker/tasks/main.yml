@@ -4,4 +4,4 @@
     name: geerlingguy.docker
   vars:
     docker_users: "{{ administrators }}"
-    docker_compose_version: "1.24.0"
+

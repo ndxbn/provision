@@ -1,7 +1,0 @@
-- name: "install IUS repository (CentOS7 only)"
-  become: true
-  when:
-    - ansible_distribution  == 'CentOS'
-    - ansible_distribution_major_version == '7'
-  yum:
-    name: "https://centos7.iuscommunity.org/ius-release.rpm"
