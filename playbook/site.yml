@@ -4,3 +4,38 @@
     - role: docker
       tags:
         - docker
+    - role: java
+      tags:
+        - java
+
+- name: "install python3-full for pip installing"
+  become: true
+  hosts: all
+  tags:
+    - ghr
+  tasks:
+    - name: "install python-full package"
+      package:
+        name: "python3-full"
+        state: present
+- name: "python pip"
+  become: true
+  hosts: all
+  roles:
+    - geerlingguy.pip
+  vars:
+    pip_install_packages:
+      - github3.py
+  tags:
+    - ghr
+- name: "Get git release"
+  hosts: all
+  tags:
+    - ghr
+  tasks:
+    - name: Get latest release of a public repository
+      community.general.github_release:
+        user: ansible
+        repo: ansible
+        action: latest_release
+
