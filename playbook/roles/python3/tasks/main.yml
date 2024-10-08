@@ -1,0 +1,17 @@
+- name: "Install python3-full for pip installing"
+  become: true
+  hosts: all
+  tasks:
+    - name: "install python-full package"
+      package:
+        name: "python3-full"
+        state: present
+- name: "Install Python pip"
+  become: true
+  hosts: all
+  roles:
+    - geerlingguy.pip
+  vars:
+    pip_install_packages:
+      - github3.py
+
