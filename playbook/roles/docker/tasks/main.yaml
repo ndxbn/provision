@@ -4,4 +4,3 @@
     name: geerlingguy.docker
   vars:
     docker_users: "{{ administrators }}"
-
