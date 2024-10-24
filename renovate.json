@@ -1,12 +1,3 @@
 {
-  "extends": [
-    "config:base",
-    ":disableDependencyDashboard",
-    ":automergeMinor",
-    ":respectLatest",
-    ":prHourlyLimitNone",
-    "group:linters",
-    "preview:dockerVersions",
-    "preview:dockerCompose"
-  ]
+  "extends": ["github>ndxbn/renovate-config"]
 }
