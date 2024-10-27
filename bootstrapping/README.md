@@ -7,8 +7,10 @@
 
 // To Be Write
 
-## Ubuntu
+## WSL2 Ubuntu
 
 ```bash
-sudo bash ubuntu.bash
+git clone https://github.com/ndxbn/provision ~/provision
+pushd ~/provision/bootstrapping
+./wsl-ubuntu.bash
 ```
