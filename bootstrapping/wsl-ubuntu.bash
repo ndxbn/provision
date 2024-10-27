@@ -17,22 +17,31 @@ sudo apt install -y stow unzip zsh
 # Ensure home directory structure
 mkdir -p ~/.local/{bin,tmp}
 
+## ssh key
+mkdir -p ~/.ssh 
+chmod 700 ~/.ssh
+cat /mnt/c/User/ndxbn/.ssh/id_ed25519 > ~/.ssh/id_ed25519
+chmod 600 ~/.ssh/id_ed25519
+
 # Install Homebrew and insatll some cli tools via brew
 git clone https://github.com/Homebrew/brew ~/.brew
 
 ~/.brew/bin/brew install gh ghq peco jq
 
 # some envs
+## Deno
 curl -fsSL https://deno.land/install.sh | sh
 ln -s ~/.deno/bin/deno ~/.local/bin/deno
-
+## Bun
 curl -fsSL https://bun.sh/install | bash
 ln -s ~/.bun/bin/bun ~/.local/bin/bun
-
+## zplug
+git clone https://github.com/zplug/zplug ~/.zplug
+## anyenv
 git clone https://github.com/anyenv/anyenv ~/.anyenv
 ~/.anyenv/bin/anyenv init
-anyenv install --init
-mkdir -p $(anyenv root)/plugins
-git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
-git clone https://github.com/znz/anyenv-git.git $(anyenv root)/plugins/anyenv-git
+~/.anyenv/bin/anyenv install --force-init
+mkdir -p ~/.anyenv/plugins
+git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-update
+~/.anyenv/bin/anyenv install nodenv
 
