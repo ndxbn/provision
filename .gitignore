@@ -9,3 +9,7 @@ galaxy_roles/
 
 # Node.js
 node_modules/
+
+# Python
+venv/
+
