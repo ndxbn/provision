@@ -20,7 +20,7 @@ mkdir -p ~/.local/{bin,tmp}
 ## ssh key
 mkdir -p ~/.ssh 
 chmod 700 ~/.ssh
-cat /mnt/c/User/ndxbn/.ssh/id_ed25519 > ~/.ssh/id_ed25519
+cat /mnt/c/Users/ndxbn/.ssh/id_ed25519 > ~/.ssh/id_ed25519
 chmod 600 ~/.ssh/id_ed25519
 
 # Dotfiles
