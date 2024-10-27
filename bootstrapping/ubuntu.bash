@@ -1,4 +1,9 @@
 #!/usr/bin/env bash
 set -eu
-sudo apt install python3-venv python3-pip
+apt install python3-venv python3-pip
+
+## under here, these should move to playbook.
+apt install openssh-server
+sysetmctl start ssh
+systemctl enable ssh
 

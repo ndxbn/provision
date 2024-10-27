@@ -8,3 +8,9 @@
 
 // To Be Write
 
+## Ubuntu
+
+```bash
+sudo bash ubuntu.bash
+```
+
