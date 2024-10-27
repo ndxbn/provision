@@ -1,0 +1,11 @@
+- name: "Install python3-full for pip installing"
+  become: true
+  package:
+    name: "python3-full"
+    state: present
+- name: "Install Python pip"
+  import_roles:
+    - geerlingguy.pip
+  vars:
+    pip_install_packages:
+      - github3.py
