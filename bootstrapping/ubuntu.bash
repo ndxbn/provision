@@ -12,7 +12,8 @@ sudo systemctl start ssh
 sudo systemctl enable ssh
 
 sudo apt install \
-	jq
+	jq\
+	peco
 
 ## GitHub CLI
 (type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) \
