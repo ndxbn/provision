@@ -36,6 +36,7 @@ git clone https://github.com/Homebrew/brew ~/.brew
 
 # some envs
 ## Deno
+## `brew install deno` is so slowly because it does compile.
 curl -fsSL https://deno.land/install.sh | sh
 ln -s ~/.deno/bin/deno ~/.local/bin/deno
 ## Bun
