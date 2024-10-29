@@ -14,6 +14,9 @@ sudo systemctl enable ssh
 
 sudo apt install -y stow unzip zsh
 
+# check commands
+type git
+
 # Ensure home directory structure
 mkdir -p ~/.local/{bin,tmp}
 
@@ -31,16 +34,12 @@ popd
 
 # Install Homebrew and insatll some cli tools via brew
 git clone https://github.com/Homebrew/brew ~/.brew
-
-~/.brew/bin/brew install gh ghq peco jq
+## do tap
+~/.brew/bin/brew tap oven-sh/bun
+## install
+~/.brew/bin/brew install gh ghq peco jq deno bun
 
 # some envs
-## Deno
-curl -fsSL https://deno.land/install.sh | sh
-ln -s ~/.deno/bin/deno ~/.local/bin/deno
-## Bun
-curl -fsSL https://bun.sh/install | bash
-ln -s ~/.bun/bin/bun ~/.local/bin/bun
 ## zplug
 git clone https://github.com/zplug/zplug ~/.zplug
 ## anyenv
