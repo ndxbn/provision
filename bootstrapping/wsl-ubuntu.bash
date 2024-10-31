@@ -32,7 +32,7 @@ popd
 # Install Homebrew and insatll some cli tools via brew
 git clone https://github.com/Homebrew/brew ~/.brew
 
-~/.brew/bin/brew install gh ghq peco jq
+~/.brew/bin/brew install gh ghq tig peco jq
 
 # some envs
 ## Deno
