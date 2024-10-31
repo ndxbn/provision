@@ -1,16 +1,14 @@
 # Manually Bootstrapping
 
-- `ndxbn` linux user should be exists
-- `ndxbn` should be able to logged in with github.com registered keys
-- [Ansible Latest](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
-- Git 2.43.0 or later
+## Requirements
 
-// To Be Write
+- `ndxbn` Linux ユーザで github.com に到達できる
+- `ndxbn` Linux ユーザの公開鍵が https://github.com/ndxbn.keys に登録済み
 
 ## WSL2 Ubuntu
 
 ```bash
-git clone https://github.com/ndxbn/provision ~/provision
+git clone git@github.com:ndxbn/provision.git ~/provision
 pushd ~/provision/bootstrapping
 ./wsl-ubuntu.bash
 ```
