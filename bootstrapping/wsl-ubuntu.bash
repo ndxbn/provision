@@ -56,7 +56,7 @@ git clone https://github.com/znz/anyenv-update.git ~/.anyenv/plugins/anyenv-upda
 ## aws-cli
 if [[ -z $(type aws) ]]
 then
-	curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+	curl "https://awscli.amazonaws.com/awscli-exe-linux-$(uname -m).zip" -o "awscliv2.zip"
 	unzip awscliv2.zip
 	./aws/install -i /home/ndxbn/.local/aws-cli -b /home/ndxbn/.local/bin
 else
