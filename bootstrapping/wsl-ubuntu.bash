@@ -44,6 +44,13 @@ ln -s ~/.deno/bin/deno ~/.local/bin/deno
 ## e.g. https://github.com/oven-sh/bun/issues/5075#issuecomment-2275474405
 curl -fsSL https://bun.sh/install | bash
 ln -s ~/.bun/bin/bun ~/.local/bin/bun
+## PHP
+## `brew install php` is so slowly because it does compile.
+## `phpenv` is so slowly too.
+curl -fsSL https://php.new/install/linux | bash
+ln -s  ~/.config/herd-lite/bin/php ~/.local/bin/php
+ln -s  ~/.config/herd-lite/bin/composer ~/.local/bin/composer
+ln -s  ~/.config/herd-lite/bin/laravel ~/.local/bin/laravel
 ## zplug
 git clone https://github.com/zplug/zplug ~/.zplug
 ## anyenv
