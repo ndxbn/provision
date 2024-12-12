@@ -1,0 +1,8 @@
+- name: Datadog Agent
+  hosts: all
+  become: true
+  roles:
+    - role: datadog.dd.agent
+  vars:
+    datadog_api_key: 6f1a548014840a673ad7430f7f857bda
+
