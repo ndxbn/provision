@@ -24,7 +24,7 @@ cat /mnt/c/Users/ndxbn/.ssh/id_ed25519 > ~/.ssh/id_ed25519
 chmod 600 ~/.ssh/id_ed25519
 
 # Dotfiles
-git clone git@github.com/ndxbn/dotfiles.git ~/dotfiles
+git clone git@github.com:ndxbn/dotfiles.git ~/dotfiles
 pushd ~/dotfiles
 ./INSTALL.sh
 popd
