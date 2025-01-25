@@ -64,3 +64,6 @@ else
 	aws --version
 fi
 
+## JetBrains Toolbox Dependencies
+sudo apt install libfuse2 libxi6 libxrender1 libxtst6 mesa-utils libfontconfig libgtk-3-bin tar dbus-user-session
+
