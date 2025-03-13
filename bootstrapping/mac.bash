@@ -14,10 +14,6 @@ popd
 /opt/homebrew/bin/brew install gh ghq tig peco jq
 
 # some envs
-## Deno
-## `brew install deno` is so slowly because it does compile.
-curl -fsSL https://deno.land/install.sh | sh
-ln -s ~/.deno/bin/deno ~/.local/bin/deno
 ## Bun
 ## `brew tap oven/bun && brew install bun` has some issue.
 ## e.g. https://github.com/oven-sh/bun/issues/5075#issuecomment-2275474405
