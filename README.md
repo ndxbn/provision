@@ -1,4 +1,2 @@
-# provision
-
-ndxbn.tokyo Infrastructure
+# My local PC provisionings
 
